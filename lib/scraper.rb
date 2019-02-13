@@ -32,7 +32,7 @@ class Scraper
 
     all_href = doc.css(".social-icon-container a").collect{ |icon| icon.attribute("href").value}
     all_href.each do |link|
-      if link.inlcude?("twitter")
+      if link.include?("twitter")
         student[:twitter] = link
       elsif link.include?("linkedin")
         student[:linkedin] = link
